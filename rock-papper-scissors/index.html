@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PROJECT: ROCK PAPER SCISSORS</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>PROJECT: ROCK PAPER SCISSORS</h1>
+	<h3 id="message">
+	
+	</h3>
+	<script type="text/javascript">
+	
+	var arrayOption=["✊ Rock","✋ Paper","✌ Scissors"];
+   
+	function userPlay(){
+        playerSelection = prompt(`${arrayOption},Please choose: Rock, Paper, or Scissors?`);
+        return playerSelection = playerSelection.toLowerCase();
+    }
+
+    function computerPlay(){
+        let lucky = Math.floor(Math.random() * 3);
+        if (lucky == 0){
+            return computerSelection = 'rock';
+        } else if (lucky == 1){
+            return computerSelection = 'paper';
+        } else{
+
+            return computerSelection = 'scissors';
+        }
+    }
+
+    function playRound(playerSelection, computerSelection){
+        if((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')){
+            alert(`You win! ${playerSelection}  beats  ${computerSelection}  !`);
+            return result = 'win';
+        } else if ((playerSelection == 'rock' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'rock')){
+            alert(`You lose...  ${computerSelection}  beats ${playerSelection} ...`);
+            return result = 'lose';
+        } else if (playerSelection == computerSelection){
+            alert(`You tied.. You both picked ${playerSelection} .`);
+            return result = 'tie';
+        } else {
+            alert(`You either input your choice incorrectly`);
+            return result = 'tie';
+        }
+    }
+    function game(){
+        let playerScore = 0;
+        let computerScore = 0;
+        while(playerScore < 3 && computerScore < 3){
+            userPlay();
+            computerPlay();
+            playRound(playerSelection, computerSelection);
+            if (result == 'win'){
+                ++playerScore;
+            } else if (result == 'lose'){
+                ++computerScore;
+            } else if (result == 'tie'){
+            }                
+            alert(`PUNCTUATION: Player Score:  ${playerScore}  Computer Score:  ${computerScore} `);
+        }
+        if (playerScore == 3){
+            alert('CONGRATULATIONS! 😎 ';
+        } else if (computerScore == 3){
+            alert('You LOSE... 😢');
+        }
+        alert('REFRESH TO UPDATE!.');
+    }
+
+    game();
+  
+  
+	</script>
+</body>
+</html>
