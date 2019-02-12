@@ -1,7 +1,7 @@
-# Web Development 101 Odin Project- Build a Google Homepage
+# Web Development 101 Odin Project- PROJECT: ROCK PAPER SCISSORS
 
 [`Link to de website`](https://natcancein.github.io/the_odin_project/rock-papper-scissors/)
 
-## The website is built with HTML5 and CSS3, flexbox was used.
+## Exercise with javascript, game "Rock/Paper/Scissors", mostly window alert, and propmt javascript function.
 
 
