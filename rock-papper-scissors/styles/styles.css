@@ -1,0 +1,131 @@
+*{
+	font-family: 'Inconsolata', monospace;
+}
+
+/*Variables in css*/
+
+:root {
+  --main-bg-color-computer:#50b5af;
+  --main-txt-color-computer:#50b5af;
+  --main-txt-color-player:#ef9553;
+}
+
+
+body{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1{
+	font-size: 46px;
+	font-weight: 700;
+}
+
+h3{
+	margin-top: -20px;
+}
+
+h2{
+	font-size: 36px;
+}
+
+h2.playerH2{
+	color: var(--main-txt-color-player);
+	margin-left: 100px;
+}
+
+h2.computerH2{
+	color: var(--main-txt-color-computer);
+	margin-right: 80px;
+}
+
+
+.buttons, .score{
+	display: inline-flex;
+	justify-content: space-between;
+	flex-direction:row;
+}
+
+.roundScene{
+	display: inline-flex;
+	justify-content: space-around;
+	flex-direction:row;
+}
+
+
+.scene{
+	width: 700px;
+	background-color: #efebeb;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.tittles{
+	display: inline-flex;
+	justify-content: space-around;
+	align-self: auto;
+}
+
+.tittles h2{
+	text-align: center;
+}
+
+.roundScene > div{
+	width:100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.playerPosition{
+	margin-left: 70px;
+}
+
+.computerPosition{
+	margin-right: 70px;
+}
+
+.buttons > button{
+	padding: 10px;
+	margin:20px;
+	font-size:20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 2px solid lightGray;
+	 transition-timing-function: ease-in;
+	/* Quick on the way out */
+ 	 transition: 0.2s;
+}
+
+button:hover{
+	-webkit-transform:scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.score > div{
+width: 280px;
+font-size: 24px;
+}
+
+.transform {
+-moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1);
+-ms-filter: "FlipH";
+filter: FlipH;
+background-color: var(--main-bg-color-computer);
+}
+
+.meTitle {
+	color: var(--main-txt-color-player);
+}
+
+
+.computerTitle {
+	color: var(--main-txt-color-computer);
+}
