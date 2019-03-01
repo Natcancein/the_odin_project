@@ -1,0 +1,151 @@
+body {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body main {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #d0eefa;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .cal {
+  background-color: #333333;
+  width: 400px;
+  height: 500px;
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 30px rgba(230, 228, 228, 0.5);
+          box-shadow: 0 10px 30px rgba(230, 228, 228, 0.5);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[4fr];
+      grid-template-columns: repeat(4fr);
+  -ms-grid-rows: ()[6fr];
+      grid-template-rows: repeat(6fr);
+  padding: 10px;
+  grid-gap: 5px 5px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  justify-items: stretch;
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: -40px;
+}
+
+body main .cal #screen {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 30px;
+  color: black;
+}
+
+body main .cal .btnClear {
+  margin: 5px;
+  background-color: #98e915;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+body main .cal .btn {
+  margin: 5px;
+  background-color: #98e915;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .cal .btn.back {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+body main .cal .btn.slash {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 5;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+body main .cal .btn.cero {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+body footer {
+  width: 100%;
+  background-color: #242222;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+body footer a {
+  color: gray;
+  font-size: 11px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+body footer a:hover {
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

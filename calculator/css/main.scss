@@ -1,0 +1,115 @@
+//lista de colores como objeto
+$colors: (
+    bg:#d0eefa,
+    buttons: #98e915,
+    structure: #333333
+);
+
+//Variable sn scss
+$borderRadius: 5px;
+
+@mixin btn ($value,$borderValue){
+    margin: $value;
+    background-color:map-get($colors, buttons);
+    border-radius: $borderValue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid ($colStart,$colEnd,$rowStart,$rowEnd){
+    grid-column-start: $colStart;
+    grid-column-end: $colEnd;
+    grid-row-start: $rowStart;
+    grid-row-end: $rowEnd;
+    //grid-column: $colStart / $colEnd;
+    //grid-row: $rowStart / $rowEnd; 
+}
+
+body {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+
+    main{
+        padding: 0;
+        //clip-path: polygon(0 0, 100% 0, 100% 63%, 0% 100%);
+        height: 100%;
+        width: 100%;
+        background-color: map-get($colors, bg);
+        margin:0;
+        position: absolute;
+        z-index: -1;
+        top:0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+ 
+            .cal{
+                background-color: map-get($colors, structure);
+                width: 400px;
+                height: 500px;
+                z-index: 1;
+                border-radius: $borderRadius;
+                box-shadow: 0 10px 30px rgba($color: #e6e4e4, $alpha: 0.5);
+                display: grid;
+                grid-template-columns: repeat(4fr);
+                grid-template-rows: repeat(6fr);
+                padding: 10px;
+                grid-gap: 5px 5px; //rowgap-columngap
+                align-items: stretch;
+                justify-items: stretch;
+                font-size:38px;
+                font-weight: 700;
+                margin-top: -40px;
+
+                #screen {
+                    @include grid(1,5,1,2);
+                    background-color:white;
+                    border-radius: 5px;
+                    margin: 5px;
+                    padding: 30px;
+                    color:black;
+                }
+
+                .btnClear{
+                    @include btn(5px,5px);
+                    @include grid(1,3,2,3);     
+                }
+
+                .btn{
+                    @include btn(5px,5px);     
+                    
+                    &.back {
+                        @include grid(3,4,2,3);
+                    }
+                    &.slash {
+                       @include grid(4,5,2,3);
+                    }
+                    &.cero {
+                        @include grid(1,3,6,7);
+                     }
+                }
+            }
+        }
+
+        footer{
+            width:100%;
+            background-color: #242222;
+            position:fixed;
+            bottom:0;
+            left: 0;
+                a{
+                    color: gray;
+                    font-size: 11px;
+                    line-height: 40px;
+                    letter-spacing: 2px;
+                }
+        
+                a:hover{
+                    color: white;
+                }
+            }
+
+}
