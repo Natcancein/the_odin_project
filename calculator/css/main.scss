@@ -27,7 +27,7 @@ $borderRadius: 5px;
 }
 
 body {
-    text-align: center;
+   
     font-family: 'Orbitron', sans-serif;
 
     main{
@@ -71,6 +71,16 @@ body {
                     margin: 5px;
                     padding: 30px;
                     color:black;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    text-align:right;
+
+                    .userInput{
+                        font-size: 18px;
+                        padding-bottom: 10px;
+                    }
+               
                 }
 
                 .btnClear{
